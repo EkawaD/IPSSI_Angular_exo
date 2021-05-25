@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PostComponent } from '../app/post/post.component'
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-ipssi';
+  posts = [new PostComponent("Bonjour", "Hello world !"), new PostComponent("Hello", "Bonjour le monde !")]
+
+  onLike(post: PostComponent) {
+    post.loveIts += 1
+  }
+
+  onDislike(post: PostComponent) {
+    post.loveIts -= 1
+  }
 }
+
