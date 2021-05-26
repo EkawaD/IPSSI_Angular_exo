@@ -1,0 +1,15 @@
+<mat-card  class="post-card">
+  <mat-card-header>
+    <div mat-card-avatar class="post-avatar"></div>
+    <mat-card-title> <input type="text" [(ngModel)]="appareilName"> </mat-card-title>
+    <mat-card-subtitle>{{createdAt | date: "short"}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content [ngStyle]="{'color': color()}" class="p-left">
+    Statut : {{appareilStatus}}
+    <mat-slide-toggle
+          class="p-left"
+          [checked]="checked"
+          (click)="switchStatus()">
+      </mat-slide-toggle>
+  </mat-card-content>
+</mat-card>

@@ -1,13 +1,15 @@
-<mat-card *ngFor="let post of posts" class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-subtitle>posté le {{post.createdAt | date: "short"}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>{{post.content}}</mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="onLike(post)" color="primary">LIKE</button>
-    <button mat-button (click)="onDislike(post)">DISLIKE</button><span>{{post.loveIts}} likes !</span>
 
-  </mat-card-actions>
-</mat-card>
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" routerLink="home" routerLinkActive="active">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-icon-button routerLink="blog" routerLinkActive="active">Blog</button>
+  <button mat-icon-button routerLink="appareil" routerLinkActive="active">Appareil</button>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+
+
+
