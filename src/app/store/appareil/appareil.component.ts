@@ -10,15 +10,16 @@ export class AppareilComponent implements OnInit {
   createdAt: Date;
 
   @Input()
-  appareilName!: string;
+  appareilName: string = "";
 
   @Input()
-  appareilStatus!: boolean;
+  appareilStatus: boolean = false;
+
+  @Input() id: number = 0;
 
 
   constructor() {
     this.createdAt = new Date()
-
   }
 
   ngOnInit(): void {

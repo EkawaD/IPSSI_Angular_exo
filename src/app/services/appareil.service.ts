@@ -9,32 +9,37 @@ export class AppareilService {
     {
       id: 1,
       name: 'Machine a laver',
-      on: false
+      status: false
     },
     {
       id: 2,
       name: 'Frigo',
-      on: true
+      status: true
     },
     {
       id: 3,
       name: 'Ordinateur',
-      on: false
+      status: false
     }
   ]
 
   constructor() {}
 
+  getAppareilbyId(id: number) {
+    const appareil = this.appareils.find((s) => {return s.id == id;});
+    return appareil
+  }
+
   switchOnAll(){
     this.appareils.map( a => {
-      a.on = true
+      a.status = true
     })
   }
 
   switchOffAll(){
     confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')
     this.appareils.map( a => {
-      a.on = false
+      a.status = false
     })
   }
 

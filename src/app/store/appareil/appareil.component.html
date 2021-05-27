@@ -2,7 +2,7 @@
   <mat-card-header>
     <div mat-card-avatar class="post-avatar"></div>
     <mat-card-title> <input type="text" [(ngModel)]="appareilName"> </mat-card-title>
-    <mat-card-subtitle>{{createdAt | date: "fullDate"}}</mat-card-subtitle>
+    <mat-card-subtitle>{{createdAt | date: "fullDate"}} <a [routerLink]= "[id]"> voir détail </a></mat-card-subtitle>
   </mat-card-header>
   <mat-card-content [ngStyle]="{'color': color()}" class="p-left">
     Statut : {{getReadableStatus()}}

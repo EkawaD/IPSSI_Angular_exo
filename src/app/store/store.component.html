@@ -1,5 +1,5 @@
-<div *ngFor="let appareil of appareils">
-  <app-appareil [appareilName]="appareil.name" [appareilStatus]="appareil.on"></app-appareil>
+<div *ngFor="let appareil of appareils; let i = index;">
+  <app-appareil [appareilName]="appareil.name" [appareilStatus]="appareil.status" [id]="appareil.id"></app-appareil>
 </div>
 
 <button class="btn" mat-raised-button (click)="switchOnAll()" color="primary">Tout allumer</button>

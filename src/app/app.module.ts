@@ -9,13 +9,17 @@ import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthComponent } from './auth/auth.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AuthComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

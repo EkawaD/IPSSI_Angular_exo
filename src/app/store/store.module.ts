@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StoreRoutingModule } from './store-routing.module';
 import { StoreComponent } from './store.component';
 import { AppareilComponent } from './appareil/appareil.component';
+import { SingleAppareilComponent } from './single-appareil/single-appareil.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     StoreComponent,
-    AppareilComponent
+    AppareilComponent,
+    SingleAppareilComponent
   ],
   imports: [
     CommonModule,

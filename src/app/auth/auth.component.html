@@ -1,0 +1,7 @@
+<div class="auth">
+  <h1> Page de connexion </h1>
+  <button mat-raised-button color="primary" *ngIf="!authStatus" (click)="onSignIn()">Se connecter</button>
+  <button mat-raised-button color="warn" *ngIf="authStatus" (click)="onSignOut()">Se déconnecter</button>
+
+</div>
+
