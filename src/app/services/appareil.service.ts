@@ -9,17 +9,17 @@ export class AppareilService {
     {
       id: 1,
       name: 'Machine a laver',
-      status: "éteint"
+      on: false
     },
     {
       id: 2,
       name: 'Frigo',
-      status: "allumé"
+      on: true
     },
     {
       id: 3,
       name: 'Ordinateur',
-      status: "éteint"
+      on: false
     }
   ]
 
@@ -27,14 +27,14 @@ export class AppareilService {
 
   switchOnAll(){
     this.appareils.map( a => {
-      a.status = "allumé"
+      a.on = true
     })
   }
 
   switchOffAll(){
     confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')
     this.appareils.map( a => {
-      a.status = "éteint"
+      a.on = false
     })
   }
 

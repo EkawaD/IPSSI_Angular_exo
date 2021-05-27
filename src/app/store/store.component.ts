@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AppareilService } from 'src/app/services/appareil.service';
 
 @Component({
-  selector: 'app-appareil-view',
-  templateUrl: './appareil-view.component.html',
-  styleUrls: ['./appareil-view.component.scss']
+  selector: 'app-store',
+  templateUrl: './store.component.html',
+  styleUrls: ['./store.component.scss']
 })
-export class AppareilViewComponent implements OnInit {
+export class StoreComponent implements OnInit {
 
   appareils!: any[];
 

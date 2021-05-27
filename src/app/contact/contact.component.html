@@ -1,0 +1,21 @@
+<form [formGroup]="contactForm"(ngSubmit)="onSubmit()"  class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Votre adresse mail</mat-label>
+    <input matInput id="email" name="email" placeholder="pat@example.com" formControlName="email" required >
+    <mat-error *ngIf="contactForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Situation</mat-label>
+    <mat-select id="situation" name="situation" formControlName="situation" >
+      <mat-option value="student">étudiant</mat-option>
+      <mat-option value="pro">employé</mat-option>
+      <mat-option value="alternance">alternance ftw</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button class="form-field" mat-raised-button (click)="fileInput.click()" color="basic"><mat-icon>file_download</mat-icon> Upload mon CV</button>
+  <p class="form-field"><mat-icon>folder</mat-icon>{{srcResult}}</p>
+  <input formControlName="file" hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+  <button mat-raised-button class="form-field" type="submit" color="primary" [disabled]="contactForm.invalid">Envoyer</button>
+</form>
+
+

@@ -1,0 +1,6 @@
+<div *ngFor="let appareil of appareils">
+  <app-appareil [appareilName]="appareil.name" [appareilStatus]="appareil.on"></app-appareil>
+</div>
+
+<button class="btn" mat-raised-button (click)="switchOnAll()" color="primary">Tout allumer</button>
+<button class="btn" mat-raised-button (click)="switchOffAll()" color="warn">Tout éteindre</button>

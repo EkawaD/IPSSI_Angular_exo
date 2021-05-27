@@ -13,9 +13,7 @@ export class AppareilComponent implements OnInit {
   appareilName!: string;
 
   @Input()
-  appareilStatus!: string;
-
-  checked!: boolean;
+  appareilStatus!: boolean;
 
 
   constructor() {
@@ -24,23 +22,18 @@ export class AppareilComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.checked = this.getStatus()
   }
 
-  getStatus() {
-    if (this.appareilStatus == "éteint") {return false}
-    else if (this.appareilStatus == "allumé") {return true}
-    else {return true}
+
+  getReadableStatus() {
+    if (this.appareilStatus) {return "Allumé"}
+    else {return "éteint"}
   }
 
   color() {
-    if (this.getStatus()) {return "orange"}
+    if (this.appareilStatus) {return "orange"}
     else {return "black"}
   }
 
-  switchStatus(){
-    if (this.getStatus()) {this.appareilStatus = "éteint"}
-    else {this.appareilStatus = "allumé"}
-  }
 
 }

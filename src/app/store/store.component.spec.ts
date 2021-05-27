@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppareilViewComponent } from './appareil-view.component';
+import { StoreComponent } from './store.component';
 
-describe('AppareilViewComponent', () => {
-  let component: AppareilViewComponent;
-  let fixture: ComponentFixture<AppareilViewComponent>;
+describe('StoreComponent', () => {
+  let component: StoreComponent;
+  let fixture: ComponentFixture<StoreComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppareilViewComponent ]
+      declarations: [ StoreComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppareilViewComponent);
+    fixture = TestBed.createComponent(StoreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

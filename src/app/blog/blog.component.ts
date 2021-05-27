@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/component/blog/model/post'
+import { Post } from 'src/app/blog/model/post'
 
 @Component({
   selector: 'app-blog',
@@ -16,3 +16,4 @@ export class BlogComponent implements OnInit {
   }
 
 }
+
