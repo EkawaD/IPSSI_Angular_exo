@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'store', canActivate: [AuthGuardService], loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
   {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
   {path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule) },
   {path: '**', component: ErrorComponent },
 
 ];

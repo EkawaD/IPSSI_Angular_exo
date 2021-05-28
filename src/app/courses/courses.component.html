@@ -1,0 +1,9 @@
+<div class="courses">
+  <h1>Nombre d'étudiant total : {{getNbEtuds()}}</h1>
+  <div *ngFor="let cours of courses">
+    <app-cours [contenu]="cours"></app-cours>
+  </div>
+</div>
+
+
+
