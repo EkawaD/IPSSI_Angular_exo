@@ -9,21 +9,33 @@ import { AppareilService } from 'src/app/services/appareil.service';
 export class StoreComponent implements OnInit {
 
   appareils!: any[];
+  appareilSubscription: any;
 
   constructor(private appareilService: AppareilService) {
    }
 
   ngOnInit(): void {
-    this.appareils = this.appareilService.appareils
-
+    this.appareilSubscription = this.appareilService.appareilsSubject.subscribe(
+      (a: any[]) => {
+        this.appareils = a;
+      }
+    )
+    this.appareilService.emitAppareilSubject();
   }
 
+  ngOnDestroy() {
+    this.appareilSubscription.unsubscribe();
+  }
+
+
   switchOnAll() {
-    this.appareilService.switchOnAll()
+    this.appareilService.switchOnAll();
+    this.appareilService.emitAppareilSubject();
   }
 
   switchOffAll() {
-    this.appareilService.switchOffAll()
+    this.appareilService.switchOffAll();
+    this.appareilService.emitAppareilSubject();
   }
 
 }

@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthComponent } from './auth/auth.component';
 import { ErrorComponent } from './error/error.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -19,7 +20,7 @@ import { ErrorComponent } from './error/error.component';
     AppComponent,
     HomeComponent,
     AuthComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,7 @@ import { ErrorComponent } from './error/error.component';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

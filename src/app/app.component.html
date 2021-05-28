@@ -5,6 +5,14 @@
   <button mat-button class="menu-link" routerLink="blog" routerLinkActive="active">Blog</button>
   <button mat-button class="menu-link" routerLink="store" routerLinkActive="active">Appareil</button>
   <button mat-button class="menu-link" routerLink="contact" routerLinkActive="active">Contact</button>
+  <button mat-button class="menu-link" [matMenuTriggerFor]="menu">Gestion utilisateurs</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item  routerLink="user" routerLinkActive="active">Utilisateurs</button>
+    <button mat-menu-item  routerLink="user/add-user" routerLinkActive="active">Ajouter utilisateur</button>
+  </mat-menu>
+
+
+
   <button mat-raised-button class="menu-link spacer" routerLink="auth" routerLinkActive="active" color="accent">Auth</button>
 </mat-toolbar>
 

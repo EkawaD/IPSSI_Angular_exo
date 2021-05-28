@@ -1,0 +1,28 @@
+<form [formGroup]="userForm"(ngSubmit)="onSubmit()"  class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Votre adresse mail</mat-label>
+    <input matInput id="email" name="email" placeholder="pat@example.com" formControlName="email" required >
+    <mat-error *ngIf="userForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Prénom</mat-label>
+    <input matInput id="firstName" name="firstName" placeholder="bastien" formControlName="firstName" required >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Nom</mat-label>
+    <input matInput id="lastName" name="lastName" placeholder="Ederhy" formControlName="lastName" required >
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>  Boisson préférée </mat-label>
+    <input matInput id="drink" name="drink" placeholder="bière!" formControlName="drinkPreference" required >
+  </mat-form-field>
+  <h3 class="center"> Mes hobbies </h3>
+  <div class="form-hobbies" formArrayName="hobbies" *ngFor="let hobbyControl of getHobbies().controls; let i = index">
+    <mat-form-field appearance="fill">
+        <input matInput id="i" placeholder="Jeux vidéo" [formControlName]="i" required >
+    </mat-form-field>
+  </div>
+  <button mat-raised-button class="form-field" type="button" (click)="onAddHobby()" color="accent">Ajouter un hobby</button>
+  <button mat-raised-button class="form-field" type="submit" color="primary" [disabled]="userForm.invalid">Envoyer</button>
+</form>
+

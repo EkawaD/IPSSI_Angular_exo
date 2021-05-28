@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   {path: 'store', canActivate: [AuthGuardService], loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
   {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
+  {path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   {path: '**', component: ErrorComponent },
 
 ];

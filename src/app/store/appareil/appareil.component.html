@@ -8,7 +8,8 @@
     Statut : {{getReadableStatus()}}
     <mat-slide-toggle
           class="p-left"
-          [(ngModel)]="appareilStatus">
+          [(ngModel)]="appareilStatus"
+          (click)="switch()">
       </mat-slide-toggle>
   </mat-card-content>
 </mat-card>

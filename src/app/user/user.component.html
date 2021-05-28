@@ -1,0 +1,16 @@
+<ng-container *ngFor="let user of users">
+  <mat-card  class="post-card">
+    <mat-card-header>
+      <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="p-left">{{user.drinkPreference}}</p>
+      <div *ngIf="user.hobbies">
+        <ul *ngFor="let hobby of user.hobbies">
+          <li> {{hobby}} </li>
+        </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
